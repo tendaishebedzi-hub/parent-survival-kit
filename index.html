@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parent Survival Kit — Practical guides for parents of school-age kids</title>
+<meta name="description" content="Three practical, printable PDF guides covering screen time, social media safety, and the work-home blur. Instant download. Priced in Rand for South African parents.">
+<meta property="og:title" content="The Parent Survival Kit">
+<meta property="og:description" content="Screen time scripts, social media safety settings, and a weekly block planner. Instant PDF download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B4965;
+    --teal: #5FA8A0;
+    --teal-light: #EAF3F2;
+    --teal-mid: #DDEEEC;
+    --ink: #1F2A33;
+    --muted: #5C6B70;
+    --border: #BFD8D4;
+    --white: #FFFFFF;
+    --off: #F7FAF9;
+    --gold: #B07D2A;
+    --gold-light: #FDF5E6;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--white); line-height: 1.65; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); text-decoration: none; }
+  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { background: var(--navy); color: var(--white) !important; padding: 7px 16px; border-radius: 6px; font-weight: 500; }
+  .nav-cta:hover { background: #143a52 !important; }
+
+  /* LAYOUT */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 4rem 0; }
+  section.alt { background: var(--off); }
+
+  /* HERO */
+  .hero { padding: 5rem 0 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+  .hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.25rem; }
+  .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--navy); line-height: 1.12; margin-bottom: 1.25rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .hero-title em { font-style: italic; color: var(--teal); }
+  .hero-sub { font-size: 17px; color: var(--muted); max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+  .hero-bundle { display: inline-flex; align-items: center; gap: 14px; background: var(--teal-light); border: 1px solid var(--border); border-radius: 10px; padding: 0.875rem 1.5rem; margin-bottom: 1.5rem; }
+  .hero-bundle-label { font-size: 14px; color: var(--muted); }
+  .hero-bundle-price { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--navy); }
+  .hero-bundle-save { font-size: 12px; font-weight: 500; background: #d4edda; color: #1a6630; padding: 3px 10px; border-radius: 999px; }
+  .btn { display: inline-block; padding: 0.75rem 1.75rem; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: opacity 0.15s; }
+  .btn:hover { opacity: 0.88; }
+  .btn-primary { background: var(--navy); color: var(--white); }
+  .btn-ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--border); margin-left: 0.75rem; }
+  .hero-note { font-size: 12px; color: var(--muted); margin-top: 0.75rem; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--teal-mid); padding: 0.875rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .trust-inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+  .trust-item { font-size: 13px; color: var(--navy); display: flex; align-items: center; gap: 6px; }
+  .trust-item::before { content: "✓"; font-weight: 500; color: var(--teal); }
+
+  /* PROBLEM */
+  .problem-intro { font-size: 19px; font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.5; max-width: 680px; margin: 0 auto 2.5rem; text-align: center; }
+
+  /* PRODUCTS */
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
+  .section-title { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--navy); margin-bottom: 2.5rem; }
+  .product-card { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.25rem; align-items: start; }
+  .product-card:last-child { margin-bottom: 0; }
+  .product-emoji { font-size: 2rem; margin-bottom: 0.75rem; line-height: 1; }
+  .product-title { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--navy); margin-bottom: 0.5rem; }
+  .product-desc { font-size: 15px; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
+  .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+  .tag { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--teal-light); color: var(--navy); }
+  .product-contents { font-size: 13px; color: var(--muted); line-height: 1.8; }
+  .product-contents li { list-style: none; padding-left: 1rem; position: relative; }
+  .product-contents li::before { content: "·"; position: absolute; left: 0; color: var(--teal); }
+  .product-price-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; min-width: 100px; }
+  .product-price { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--navy); }
+  .btn-buy { display: inline-block; background: var(--teal); color: var(--white); padding: 9px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .btn-buy:hover { background: #4d9990; }
+  .solo-price { font-size: 11px; color: var(--muted); margin-top: -6px; }
+
+  /* BUNDLE */
+  .bundle-card { background: var(--navy); border-radius: 14px; padding: 2.5rem; color: var(--white); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+  .bundle-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
+  .bundle-title { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 0.4rem; }
+  .bundle-sub { font-size: 14px; color: rgba(255,255,255,0.65); }
+  .bundle-pricing { display: flex; align-items: baseline; gap: 12px; }
+  .bundle-price { font-family: 'DM Serif Display', serif; font-size: 3rem; }
+  .bundle-was { font-size: 15px; color: rgba(255,255,255,0.45); text-decoration: line-through; }
+  .bundle-save-badge { font-size: 12px; font-weight: 500; background: #d4edda; color: #1a6630; padding: 4px 12px; border-radius: 999px; }
+  .btn-bundle { background: var(--teal); color: var(--white); padding: 0.875rem 2rem; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none; white-space: nowrap; display: inline-block; }
+  .btn-bundle:hover { background: #4d9990; }
+
+  /* WHY */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+  .why-card { background: var(--teal-light); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; }
+  .why-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .why-title { font-weight: 500; font-size: 15px; color: var(--navy); margin-bottom: 0.25rem; }
+  .why-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* FAQ */
+  details { border-bottom: 1px solid var(--border); }
+  details:first-of-type { border-top: 1px solid var(--border); }
+  summary { font-size: 15px; font-weight: 500; color: var(--navy); padding: 1rem 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::after { content: "+"; font-size: 18px; color: var(--teal); }
+  details[open] summary::after { content: "−"; }
+  details p { font-size: 14px; color: var(--muted); padding-bottom: 1rem; line-height: 1.7; }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 2.5rem 0; font-size: 13px; }
+  .footer-inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem; }
+  .footer-brand { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--white); margin-bottom: 0.4rem; }
+  .footer-tagline { font-size: 12px; }
+  .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 900px; margin: 1.5rem auto 0; padding: 1.25rem 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.35); font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+  /* LEGAL PAGES */
+  .legal-page { display: none; }
+  .legal-page.active { display: block; }
+  .legal-content { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .legal-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--teal); text-decoration: none; margin-bottom: 2rem; cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; }
+  .legal-content h1 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--navy); margin-bottom: 0.5rem; }
+  .legal-date { font-size: 13px; color: var(--muted); margin-bottom: 2rem; }
+  .legal-content h2 { font-size: 16px; font-weight: 500; color: var(--navy); margin: 1.75rem 0 0.5rem; }
+  .legal-content p, .legal-content li { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 0.75rem; }
+  .legal-content ul { padding-left: 1.25rem; }
+
+  /* MAIN PAGE */
+  #main-page { display: block; }
+
+  @media (max-width: 600px) {
+    .product-card { grid-template-columns: 1fr; }
+    .product-price-col { flex-direction: row; align-items: center; }
+    .bundle-card { flex-direction: column; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="showMain()">Parent Survival Kit</a>
+    <div class="nav-links">
+      <a href="#products">Guides</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" onclick="showLegal('privacy')">Privacy</a>
+      <a href="#" onclick="showLegal('terms')">Terms</a>
+      <a href="#bundle" class="nav-cta">Get the bundle</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN PAGE ===== -->
+<div id="main-page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Practical guides for parents of school-age kids</p>
+      <h1 class="hero-title">Stop managing the chaos.<br><em>Start managing the plan.</em></h1>
+      <p class="hero-sub">Three short, printable PDF guides covering the three problems parents tell us about most: screen time fights, social media anxiety, and the work-home blur.</p>
+      <div class="hero-bundle">
+        <span class="hero-bundle-label">All 3 guides</span>
+        <span class="hero-bundle-price">R400</span>
+        <span class="hero-bundle-save">save R100</span>
+      </div>
+      <div>
+        <a href="#bundle" class="btn btn-primary">Get the full bundle</a>
+        <a href="#products" class="btn btn-ghost">See what's inside</a>
+      </div>
+      <p class="hero-note">Instant PDF download · No subscription · Works on any device</p>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <span class="trust-item">Instant PDF download</span>
+      <span class="trust-item">Printable on any home printer</span>
+      <span class="trust-item">Pay securely via Payhip</span>
+      <span class="trust-item">No subscription — buy once</span>
+      <span class="trust-item">Available in ZAR and USD</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="alt">
+    <div class="container" style="text-align:center">
+      <p class="problem-intro">"Every conversation about phones turns into a battle. I don't know what my kid sees online. And I'm always half-present at work and half-present at home." <br><br>If any of those sound familiar — these guides are built for exactly that.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <p class="section-label">Individual guides</p>
+      <h2 class="section-title">Three problems. Three practical fixes.</h2>
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div>
+          <div class="product-emoji">📱</div>
+          <h3 class="product-title">Screen Time Reset Kit</h3>
+          <p class="product-desc">End the daily argument. Includes a word-for-word conversation script, a printable device agreement both parent and child sign, a consequence and reward chart, and a phone-free evening routine card — for kids ages 4–18.</p>
+          <div class="product-tags">
+            <span class="tag">11 pages</span>
+            <span class="tag">Ages 4–18</span>
+            <span class="tag">Printable agreement</span>
+            <span class="tag">Conversation script</span>
+          </div>
+          <ul class="product-contents">
+            <li>Age-banded guidelines (under 6 through 16–18)</li>
+            <li>Word-for-word Reset Conversation script + 4 objection responses</li>
+            <li>Printable Device Agreement — under-10 version and 11+ version with signature lines</li>
+            <li>Consequence and Reward Chart (designed to pin on the fridge)</li>
+            <li>Phone-Free Hour Routine Card for evenings</li>
+            <li>Weekly Check-In template to keep the agreement alive</li>
+            <li>Troubleshooting FAQ for the most common failure modes</li>
+          </ul>
+        </div>
+        <div class="product-price-col">
+          <div class="product-price">R150</div>
+          <span class="solo-price">solo price</span>
+          <a href="YOUR_PAYHIP_LINK_1" class="btn-buy">Buy now</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div>
+          <div class="product-emoji">🔒</div>
+          <h3 class="product-title">Social Media Safety Playbook</h3>
+          <p class="product-desc">The exact settings to turn on across Instagram, TikTok, Snapchat, and YouTube — plus warning signs to watch for and a calm action plan if something goes wrong. Updated for 2026 platform settings.</p>
+          <div class="product-tags">
+            <span class="tag">14 pages</span>
+            <span class="tag">Ages 10–18</span>
+            <span class="tag">Updated 2026</span>
+            <span class="tag">Quick reference card</span>
+          </div>
+          <ul class="product-contents">
+            <li>Age-appropriate access guide — should they be on this platform at all?</li>
+            <li>Instagram: Teen Account defaults + Family Center supervision setup</li>
+            <li>TikTok: Family Pairing, DM controls, search restrictions</li>
+            <li>Snapchat: Family Center, Ghost Mode, My AI removal</li>
+            <li>YouTube: Supervised accounts, content level settings, Shorts limits</li>
+            <li>Red flag warning signs — behavioral and conversational</li>
+            <li>Step-by-step action plan if something goes wrong</li>
+            <li>Quick Reference Card to screenshot and keep on your own phone</li>
+          </ul>
+        </div>
+        <div class="product-price-col">
+          <div class="product-price">R200</div>
+          <span class="solo-price">solo price</span>
+          <a href="YOUR_PAYHIP_LINK_2" class="btn-buy">Buy now</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div>
+          <div class="product-emoji">📅</div>
+          <h3 class="product-title">Working Parent Weekly Reset</h3>
+          <p class="product-desc">A landscape weekly block planner, household rules for protecting Work and Family time, three manager negotiation scripts, and a 5-minute daily handoff ritual — to stop work and family bleeding into each other.</p>
+          <div class="product-tags">
+            <span class="tag">10 pages</span>
+            <span class="tag">WFH parents</span>
+            <span class="tag">Landscape planner</span>
+            <span class="tag">Manager scripts</span>
+          </div>
+          <ul class="product-contents">
+            <li>Landscape Weekly Block Planner — 7 days × 6 time blocks, fillable and printable</li>
+            <li>Work / Family / Flex label system with a fill-in guide</li>
+            <li>"Protect This Block" household rules for both block types</li>
+            <li>Three manager negotiation scripts — data-driven, trust-based, and formal policy</li>
+            <li>Emergency Contingency Card — fill in once, keep visible</li>
+            <li>5-minute Work-to-Parenting Handoff ritual for end of day</li>
+            <li>Weekly Review template to pair with the planner</li>
+          </ul>
+        </div>
+        <div class="product-price-col">
+          <div class="product-price">R150</div>
+          <span class="solo-price">solo price</span>
+          <a href="YOUR_PAYHIP_LINK_3" class="btn-buy">Buy now</a>
+        </div>
+      </div>
+
+      <!-- BUNDLE -->
+      <div class="bundle-card" id="bundle">
+        <div>
+          <p class="bundle-label">Best value</p>
+          <h3 class="bundle-title">The Parent Survival Kit — all 3 guides</h3>
+          <p class="bundle-sub">Same design. Same practical approach. Three problems in one download.</p>
+          <div class="bundle-pricing" style="margin-top:1rem">
+            <span class="bundle-price">R400</span>
+            <span class="bundle-was">R500</span>
+            <span class="bundle-save-badge">save R100</span>
+          </div>
+        </div>
+        <div style="text-align:center">
+          <a href="YOUR_PAYHIP_BUNDLE_LINK" class="btn-bundle">Get the bundle →</a>
+          <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:0.5rem">Instant download · 35 pages total</p>
+          <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:0.25rem">Also available in USD — <a href="YOUR_PAYHIP_USD_LINK" style="color:var(--teal)">international buyers</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="alt">
+    <div class="container">
+      <p class="section-label">Why these guides</p>
+      <h2 class="section-title">Built to be used the same day you read them</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">📝</div>
+          <div class="why-title">Scripts, not theory</div>
+          <div class="why-text">Every guide includes the actual words to say — conversation openers, objection responses, and manager scripts you can use as-is.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🖨️</div>
+          <div class="why-title">Printable and fillable</div>
+          <div class="why-text">Designed for standard A4 paper. Sign agreements together, pin charts on the fridge, or fill in digitally — your choice.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔄</div>
+          <div class="why-title">Built to stick</div>
+          <div class="why-text">Each guide includes a weekly check-in or review template — because most family agreements fail not because they were wrong, but because nobody revisited them.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📌</div>
+          <div class="why-title">Consistent across all ages</div>
+          <div class="why-text">Screen time guidelines for ages 4–18, device agreements in two versions, and platform settings that address teens specifically — not one-size advice.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container" style="max-width:680px">
+      <p class="section-label">Common questions</p>
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>How do I receive the guides after purchase?</summary>
+        <p>Instantly. Payhip sends a download link to your email the moment your payment is confirmed. No waiting, no shipping — you can open the PDFs on any device immediately.</p>
+      </details>
+      <details>
+        <summary>Can I print these at home?</summary>
+        <p>Yes — all three guides are designed for standard A4 paper on any home printer. The weekly planner in the Working Parent guide prints in landscape orientation; everything else is portrait.</p>
+      </details>
+      <details>
+        <summary>What ages are the guides suitable for?</summary>
+        <p>The Screen Time Reset Kit covers ages 4–18, with separate device agreements for under-10s and 11–18s. The Social Media Safety Playbook is aimed at parents of 10–18 year olds. The Working Parent Weekly Reset is for the parent, not the children.</p>
+      </details>
+      <details>
+        <summary>Are prices in Rand or dollars?</summary>
+        <p>Both options are available. The listings on this page are priced in South African Rand. International buyers can access USD-priced listings via the "international buyers" link on the bundle section above.</p>
+      </details>
+      <details>
+        <summary>Can I share the guides with a co-parent or partner?</summary>
+        <p>Yes — personal household use is included in your purchase. The guides are for your family's use and may not be redistributed, sold, or shared publicly.</p>
+      </details>
+      <details>
+        <summary>What if I want a refund?</summary>
+        <p>We offer a full refund within 7 days of purchase if the guide doesn't meet your expectations. Contact us at <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a> with your order number and we'll process it promptly. See our full <a href="#" onclick="showLegal('refund')" style="color:var(--teal)">Refund Policy</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Parent Survival Kit</div>
+        <div class="footer-tagline">A Kugona.ai product · Pretoria, South Africa</div>
+        <div style="margin-top:0.5rem;font-size:12px;">Contact: <a href="mailto:kugonacv@gmail.com" style="color:rgba(255,255,255,0.55)">kugonacv@gmail.com</a></div>
+      </div>
+      <div class="footer-links">
+        <a href="#" onclick="showLegal('privacy')">Privacy Policy</a>
+        <a href="#" onclick="showLegal('terms')">Terms of Service</a>
+        <a href="#" onclick="showLegal('refund')">Refund Policy</a>
+        <a href="#" onclick="showLegal('delivery')">Delivery Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kugona.ai · Parent Survival Kit. All rights reserved.</span>
+      <span>Secure checkout via Payhip · Payments via Paystack</span>
+    </div>
+  </footer>
+
+</div><!-- end main-page -->
+
+
+<!-- ===== LEGAL PAGES ===== -->
+
+<!-- PRIVACY POLICY -->
+<div id="page-privacy" class="legal-page">
+  <nav><!-- reuses sticky nav --></nav>
+  <div class="legal-content">
+    <button class="legal-back" onclick="showMain()">← Back to store</button>
+    <h1>Privacy Policy</h1>
+    <p class="legal-date">Effective date: 8 July 2026 · Last updated: 8 July 2026</p>
+
+    <h2>1. Who we are</h2>
+    <p>The Parent Survival Kit is a digital product brand operated by Kugona.ai, based in Pretoria, Gauteng, South Africa. Our contact email is <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a>. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or purchase our digital products.</p>
+
+    <h2>2. Information we collect</h2>
+    <p>When you make a purchase, our payment and delivery partner (Payhip) collects the following on our behalf:</p>
+    <ul>
+      <li>Your name and email address</li>
+      <li>Payment information (processed securely by Paystack or Stripe — we do not store card details)</li>
+      <li>Your country/region for VAT and tax purposes</li>
+    </ul>
+    <p>Our website itself does not use tracking cookies or collect personal data independently. We do not use Google Analytics or any third-party advertising trackers.</p>
+
+    <h2>3. How we use your information</h2>
+    <p>We use the information collected solely to:</p>
+    <ul>
+      <li>Deliver your purchased digital products via email</li>
+      <li>Send you a receipt and order confirmation</li>
+      <li>Respond to support or refund requests</li>
+      <li>Comply with legal and tax obligations</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+    <h2>4. Data storage and security</h2>
+    <p>Your purchase data is stored securely by Payhip on servers compliant with industry-standard security practices. Payment data is handled by Paystack and Stripe, both of which are PCI-DSS compliant. We retain purchase records for a minimum of 5 years for accounting and legal compliance purposes.</p>
+
+    <h2>5. Your rights</h2>
+    <p>You have the right to request access to, correction of, or deletion of your personal data held by us. To exercise these rights, contact us at <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a>. We will respond within 14 business days.</p>
+
+    <h2>6. Third-party services</h2>
+    <p>Our checkout and delivery is handled by Payhip (payhip.com). Payments in South Africa are processed by Paystack (paystack.com). Each has their own privacy policy, which we encourage you to review.</p>
+
+    <h2>7. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. The effective date at the top of this page will reflect the most recent update. Continued use of our site after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any privacy-related questions, email us at <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a>.</p>
+  </div>
+</div>
+
+<!-- TERMS OF SERVICE -->
+<div id="page-terms" class="legal-page">
+  <div class="legal-content">
+    <button class="legal-back" onclick="showMain()">← Back to store</button>
+    <h1>Terms of Service</h1>
+    <p class="legal-date">Effective date: 8 July 2026 · Last updated: 8 July 2026</p>
+
+    <h2>1. About us</h2>
+    <p>These Terms of Service govern your purchase and use of digital products sold by Kugona.ai trading as Parent Survival Kit, based in Pretoria, Gauteng, South Africa. By completing a purchase, you agree to these terms.</p>
+
+    <h2>2. Products</h2>
+    <p>We sell digital PDF guides for personal, household use. All products are delivered electronically via download link immediately after purchase. No physical goods are shipped.</p>
+
+    <h2>3. Licence</h2>
+    <p>Upon purchase, you are granted a non-exclusive, non-transferable licence to download and use the product for personal and household use only. You may not:</p>
+    <ul>
+      <li>Reproduce, resell, or redistribute any guide in whole or in part</li>
+      <li>Share download links publicly or with non-household members</li>
+      <li>Use the content in commercial training, courses, or products without written permission</li>
+    </ul>
+
+    <h2>4. Pricing</h2>
+    <p>All prices displayed on this website are in South African Rand (ZAR) unless otherwise indicated. Prices are inclusive of any applicable VAT. We reserve the right to change prices at any time; the price displayed at the time of your purchase is the price you pay.</p>
+
+    <h2>5. Payment</h2>
+    <p>Payments are processed securely via Payhip using Paystack (South African cards) or Stripe (international cards). We do not store payment card details. Transactions are subject to the terms of these payment processors.</p>
+
+    <h2>6. Refunds</h2>
+    <p>Please see our separate <a href="#" onclick="showLegal('refund')" style="color:var(--teal)">Refund Policy</a> for full details. In summary: we offer a 7-day refund for any guide that does not meet your expectations.</p>
+
+    <h2>7. Limitation of liability</h2>
+    <p>Our guides provide general parenting information and practical frameworks. They are not professional psychological, legal, or medical advice. We are not liable for outcomes arising from application of the guidance. Our total liability to you for any claim arising from a purchase shall not exceed the amount you paid for the relevant product.</p>
+
+    <h2>8. Governing law</h2>
+    <p>These terms are governed by the laws of the Republic of South Africa. Any disputes shall be subject to the jurisdiction of the courts of South Africa.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about these terms: <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- REFUND POLICY -->
+<div id="page-refund" class="legal-page">
+  <div class="legal-content">
+    <button class="legal-back" onclick="showMain()">← Back to store</button>
+    <h1>Refund Policy</h1>
+    <p class="legal-date">Effective date: 8 July 2026 · Last updated: 8 July 2026</p>
+
+    <h2>Our commitment</h2>
+    <p>We want every purchase to feel worthwhile. If any guide does not meet your expectations, we will refund you — no lengthy process required.</p>
+
+    <h2>Eligibility</h2>
+    <p>You are eligible for a full refund if:</p>
+    <ul>
+      <li>You request it within <strong>7 days</strong> of your original purchase date</li>
+      <li>You provide your order number or the email address used at checkout</li>
+    </ul>
+    <p>Because our products are digital downloads delivered immediately, we do not require you to "return" anything. We take your word that the guide did not serve your needs.</p>
+
+    <h2>How to request a refund</h2>
+    <p>Email <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a> with the subject line "Refund request — [your order number]". We will process your refund within 3 business days. Refunds are returned to your original payment method. Processing time by your bank or card issuer may vary.</p>
+
+    <h2>Exceptions</h2>
+    <p>We cannot offer refunds for requests made more than 7 days after purchase, or for purchases made through third-party resellers (such as Gumroad) — please contact the platform directly for those transactions.</p>
+
+    <h2>Contact</h2>
+    <p>Refund enquiries: <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- DELIVERY POLICY -->
+<div id="page-delivery" class="legal-page">
+  <div class="legal-content">
+    <button class="legal-back" onclick="showMain()">← Back to store</button>
+    <h1>Delivery Policy</h1>
+    <p class="legal-date">Effective date: 8 July 2026 · Last updated: 8 July 2026</p>
+
+    <h2>Digital delivery — instant</h2>
+    <p>All Parent Survival Kit products are digital PDF files. There are no physical goods and no shipping involved.</p>
+    <p>Immediately after your payment is confirmed, Payhip will send a download link to the email address you provided at checkout. This email typically arrives within 1–2 minutes.</p>
+
+    <h2>What you receive</h2>
+    <ul>
+      <li>A confirmation email with your order summary</li>
+      <li>A secure download link valid for 30 days (you can re-download as needed by contacting us)</li>
+      <li>One PDF file per guide purchased, or a bundled download if you purchased the bundle</li>
+    </ul>
+
+    <h2>File format and compatibility</h2>
+    <p>All guides are delivered as standard PDF files compatible with:</p>
+    <ul>
+      <li>Adobe Acrobat Reader (free, Windows/Mac)</li>
+      <li>Any modern web browser (Chrome, Edge, Firefox, Safari)</li>
+      <li>iOS and Android PDF viewers</li>
+      <li>Any standard home printer (A4 paper)</li>
+    </ul>
+
+    <h2>Didn't receive your download email?</h2>
+    <p>Check your spam or junk folder first. If the email is not there within 10 minutes of purchase, email us at <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a> with your order number and we will resend the download link immediately.</p>
+
+    <h2>Re-downloads</h2>
+    <p>If you lose access to your download link, contact us at <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a> with your original order email address and we will provide a new link at no charge.</p>
+
+    <h2>Contact</h2>
+    <p>Delivery issues: <a href="mailto:kugonacv@gmail.com" style="color:var(--teal)">kugonacv@gmail.com</a></p>
+  </div>
+</div>
+
+<script>
+  function showMain() {
+    document.getElementById('main-page').style.display = 'block';
+    document.querySelectorAll('.legal-page').forEach(p => p.classList.remove('active'));
+    window.scrollTo(0, 0);
+  }
+  function showLegal(page) {
+    document.getElementById('main-page').style.display = 'none';
+    document.querySelectorAll('.legal-page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    window.scrollTo(0, 0);
+    return false;
+  }
+</script>
+</body>
+</html>
